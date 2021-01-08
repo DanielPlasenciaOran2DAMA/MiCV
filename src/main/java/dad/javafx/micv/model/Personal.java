@@ -20,7 +20,7 @@ public class Personal {
 	private StringProperty direccion = new SimpleStringProperty();
 	private StringProperty codigoPostal = new SimpleStringProperty();
 	private StringProperty localidad = new SimpleStringProperty();
-	private StringProperty pais = new SimpleStringProperty();
+	private ListProperty<String> pais = new SimpleListProperty<>(FXCollections.observableArrayList());
 	private ListProperty<Nacionalidad> nacionalidades = new SimpleListProperty<Nacionalidad>(
 			FXCollections.observableArrayList());
 
@@ -108,18 +108,6 @@ public class Personal {
 		this.localidadProperty().set(localidad);
 	}
 
-	public final StringProperty paisProperty() {
-		return this.pais;
-	}
-
-	public final String getPais() {
-		return this.paisProperty().get();
-	}
-
-	public final void setPais(final String pais) {
-		this.paisProperty().set(pais);
-	}
-
 	public final ListProperty<Nacionalidad> nacionalidadesProperty() {
 		return this.nacionalidades;
 	}
@@ -132,4 +120,15 @@ public class Personal {
 		this.nacionalidadesProperty().set(nacionalidades);
 	}
 
+	public final ListProperty<String> paisProperty() {
+		return this.pais;
+	}
+
+	public final ObservableList<String> getPais() {
+		return this.paisProperty().get();
+	}
+
+	public final void setPais(final ObservableList<String> pais) {
+		this.paisProperty().set(pais);
+	}
 }

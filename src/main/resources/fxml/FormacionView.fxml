@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TableView fx:id="formcionTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="500.0">
+			<columns>
+				<TableColumn fx:id="desdeColumn" maxWidth="1.7976931348623157E308" prefWidth="75.0" text="Desde" />
+				<TableColumn fx:id="hastaColumn" maxWidth="1.7976931348623157E308" prefWidth="75.0" text="Hasta" />
+				<TableColumn fx:id="denominacionColumn" maxWidth="1.7976931348623157E308" prefWidth="100.0" text="Denominación" />
+				<TableColumn fx:id="organizadorColumn" maxWidth="1.7976931348623157E308" prefWidth="85.0" text="Organizador" />
+			</columns>
+			<HBox.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</HBox.margin>
+		</TableView>
+		<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="65.0">
+			<children>
+				<Button fx:id="añadirFormacionButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAñadirFormAction" prefWidth="68.0" text="Añadir">
+					<VBox.margin>
+						<Insets bottom="5.0" right="5.0" top="5.0" />
+					</VBox.margin>
+				</Button>
+				<Button fx:id="eliminarFormacionColumn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEliminarFormAction" text="Eliminar">
+					<VBox.margin>
+						<Insets right="5.0" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+	</children>
+</HBox>
