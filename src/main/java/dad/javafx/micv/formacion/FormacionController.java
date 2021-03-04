@@ -75,7 +75,7 @@ public class FormacionController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		formacionList.addListener((o, ov, nv) -> onFormacionListener(o, ov, nv));
 
-		tituloSeleccionado.bind(formacionTable.getSelectionModel().selectedItemProperty());
+		//tituloSeleccionado.bind(formacionTable.getSelectionModel().selectedItemProperty());
 
 		denominacionColumn.setCellValueFactory(value -> value.getValue().denominacionProperty());
 		denominacionColumn.setCellFactory(TextFieldTableCell.forTableColumn());

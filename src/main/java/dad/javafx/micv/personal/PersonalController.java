@@ -88,7 +88,7 @@ public class PersonalController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		paisCombo.itemsProperty().bindBidirectional(model.get().paisProperty());
-		readCSVPaises();
+		//readCSVPaises();
 
 		nacionalidadSelecionada.bind(nacionalidad.getSelectionModel().selectedItemProperty());
 		paisCombo.valueProperty().bindBidirectional(paisSeleccionado);
@@ -159,7 +159,7 @@ public class PersonalController implements Initializable {
 		return nacionalidades;
 	}
 
-	private void readCSVPaises() {
+	/*private void readCSVPaises() {
 		try {
 			BufferedReader br = new BufferedReader(
 					new InputStreamReader(new FileInputStream(new File(PATH + "paises.csv")), "UTF-8"));
@@ -172,7 +172,7 @@ public class PersonalController implements Initializable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	public GridPane getView() {
 		return view;
